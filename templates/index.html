@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Django Template-Based Web Development Course</title>
+  <style>
+    body {
+      background-color: #ffffff;
+      color: #000000;
+      font-family: Arial, Helvetica, sans-serif;
+      margin: 0;
+      padding: 50px 80px;
+      line-height: 1.5;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .header {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .mentor-title {
+      font-size: 24px;
+      font-weight: bold;
+      margin: 0 0 8px 0;
+    }
+
+    .github-link {
+      font-size: 16px;
+      margin: 0 0 35px 0;
+    }
+
+    .github-link a {
+      color: #0066cc;
+      text-decoration: underline;
+    }
+
+    .course-title {
+      font-size: 28px;
+      font-weight: bold;
+      margin: 0 0 15px 0;
+    }
+
+    .total-classes {
+      font-size: 18px;
+      font-weight: bold;
+      text-align: left;
+      margin: 0 0 20px 0;
+    }
+
+    hr {
+      border: 0;
+      border-top: 1px solid #7f7f7f;
+      margin-bottom: 40px;
+    }
+
+    .module-title {
+      font-size: 24px;
+      font-weight: bold;
+      margin: 40px 0 20px 0;
+    }
+
+    .class-item {
+      display: flex;
+      align-items: center;
+      margin: 20px 0 10px 0;
+    }
+
+    .class-checkbox {
+      width: 18px;
+      height: 18px;
+      margin-right: 12px;
+      cursor: pointer;
+    }
+
+    .class-title {
+      font-size: 18px;
+      font-weight: bold;
+      cursor: pointer;
+      user-select: none;
+    }
+
+    .completed .class-title {
+      text-decoration: line-through;
+      color: #7f7f7f;
+    }
+
+    ul {
+      list-style-type: none;
+      padding-left: 30px;
+      margin: 0 0 20px 0;
+    }
+
+    li {
+      position: relative;
+      padding-left: 20px;
+      margin-bottom: 4px;
+      font-size: 16px;
+    }
+
+    li::before {
+      content: "●";
+      position: absolute;
+      left: 0;
+      font-size: 12px;
+      top: 1px;
+    }
+
+    .features-section-title {
+      font-size: 28px;
+      font-weight: bold;
+      margin: 50px 0 25px 0;
+    }
+
+    .features-subtitle {
+      font-size: 18px;
+      font-weight: bold;
+      margin: 20px 0 10px 0;
+    }
+
+    .outcomes-title {
+      font-size: 28px;
+      font-weight: bold;
+      margin: 50px 0 20px 0;
+    }
+
+    .outcomes-desc {
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
+
+    @media (max-width: 600px) {
+      body {
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <!-- Header -->
+    <div class="header">
+      <div class="mentor-title">Mentor By: Md. Emon Miah</div>
+      <div class="github-link">Github: <a href="https://github.com/programmermdemonmiah"
+          target="_blank">https://github.com/programmermdemonmiah</a></div>
+      <div class="course-title">Django Template-Based Web Development Course</div>
+    </div>
+    <div class="total-classes">Total Classes: 46</div>
+    <hr>
+
+    <!-- Module 01 -->
+    <div class="module-title">Module 01: Python Essentials (Classes 1-8)</div>
+
+    <div class="class-item" id="class-container-1">
+      <input type="checkbox" id="class-1" class="class-checkbox">
+      <label for="class-1" class="class-title">Class 01: Introduction to Python</label>
+    </div>
+    <ul>
+      <li>What is Python?</li>
+      <li>Python Installation</li>
+      <li>VS Code Setup</li>
+      <li>First Python Program</li>
+    </ul>
+
+    <div class="class-item" id="class-container-2">
+      <input type="checkbox" id="class-2" class="class-checkbox">
+      <label for="class-2" class="class-title">Class 02: Variables &amp; Data Types</label>
+    </div>
+    <ul>
+      <li>Variables</li>
+      <li>Numbers</li>
+      <li>Strings</li>
+      <li>Boolean</li>
+    </ul>
+
+    <div class="class-item" id="class-container-3">
+      <input type="checkbox" id="class-3" class="class-checkbox">
+      <label for="class-3" class="class-title">Class 03: Input, Output &amp; Operators</label>
+    </div>
+    <ul>
+      <li>input()</li>
+      <li>print()</li>
+      <li>Arithmetic Operators</li>
+      <li>Comparison Operators</li>
+    </ul>
+
+    <div class="class-item" id="class-container-4">
+      <input type="checkbox" id="class-4" class="class-checkbox">
+      <label for="class-4" class="class-title">Class 04: Conditional Statements</label>
+    </div>
+    <ul>
+      <li>if</li>
+      <li>elif</li>
+      <li>else</li>
+    </ul>
+
+    <div class="class-item" id="class-container-5">
+      <input type="checkbox" id="class-5" class="class-checkbox">
+      <label for="class-5" class="class-title">Class 05: Loops</label>
+    </div>
+    <ul>
+      <li>for loop</li>
+      <li>while loop</li>
+      <li>break</li>
+      <li>continue</li>
+    </ul>
+
+    <div class="class-item" id="class-container-6">
+      <input type="checkbox" id="class-6" class="class-checkbox">
+      <label for="class-6" class="class-title">Class 06: Functions</label>
+    </div>
+    <ul>
+      <li>Function Creation</li>
+      <li>Parameters</li>
+      <li>Return Values</li>
+    </ul>
+
+    <div class="class-item" id="class-container-7">
+      <input type="checkbox" id="class-7" class="class-checkbox">
+      <label for="class-7" class="class-title">Class 07: Collections</label>
+    </div>
+    <ul>
+      <li>List</li>
+      <li>Tuple</li>
+      <li>Dictionary</li>
+      <li>Set</li>
+    </ul>
+
+    <div class="class-item" id="class-container-8">
+      <input type="checkbox" id="class-8" class="class-checkbox">
+      <label for="class-8" class="class-title">Class 08: OOP Fundamentals</label>
+    </div>
+    <ul>
+      <li>Class</li>
+      <li>Object</li>
+      <li>Constructor</li>
+      <li>Inheritance</li>
+    </ul>
+
+    <hr>
+
+    <!-- Module 02 -->
+    <div class="module-title">Module 02: Django Fundamentals (Classes 9-17)</div>
+
+    <div class="class-item" id="class-container-9">
+      <input type="checkbox" id="class-9" class="class-checkbox">
+      <label for="class-9" class="class-title">Class 09: Virtual Environment Setup</label>
+    </div>
+    <ul>
+      <li>What is a Virtual Environment?</li>
+      <li>Why Use Virtual Environments?</li>
+      <li>Creating a Virtual Environment</li>
+      <li>Activating &amp; Deactivating Virtual Environments</li>
+      <li>Managing Project Dependencies</li>
+    </ul>
+
+    <div class="class-item" id="class-container-10">
+      <input type="checkbox" id="class-10" class="class-checkbox">
+      <label for="class-10" class="class-title">Class 10: Introduction to Django</label>
+    </div>
+    <ul>
+      <li>What is Django?</li>
+      <li>Features of Django</li>
+      <li>MVT Architecture</li>
+      <li>Django Installation</li>
+    </ul>
+
+    <div class="class-item" id="class-container-11">
+      <input type="checkbox" id="class-11" class="class-checkbox">
+      <label for="class-11" class="class-title">Class 11: Creating a Django Project</label>
+    </div>
+    <ul>
+      <li>startproject</li>
+      <li>Project Structure</li>
+      <li>Running Development Server</li>
+    </ul>
+
+    <div class="class-item" id="class-container-12">
+      <input type="checkbox" id="class-12" class="class-checkbox">
+      <label for="class-12" class="class-title">Class 12: Creating Applications</label>
+    </div>
+    <ul>
+      <li>startapp</li>
+      <li>App Structure</li>
+      <li>App Registration</li>
+    </ul>
+
+    <div class="class-item" id="class-container-13">
+      <input type="checkbox" id="class-13" class="class-checkbox">
+      <label for="class-13" class="class-title">Class 13: URL Routing Basics</label>
+    </div>
+    <ul>
+      <li>path()</li>
+      <li>URL Mapping</li>
+      <li>URL Organization</li>
+    </ul>
+
+    <div class="class-item" id="class-container-14">
+      <input type="checkbox" id="class-14" class="class-checkbox">
+      <label for="class-14" class="class-title">Class 14: Views Fundamentals</label>
+    </div>
+    <ul>
+      <li>Function-Based Views</li>
+      <li>HttpResponse</li>
+      <li>Request Object</li>
+    </ul>
+
+    <div class="class-item" id="class-container-15">
+      <input type="checkbox" id="class-15" class="class-checkbox">
+      <label for="class-15" class="class-title">Class 15: Rendering Templates</label>
+    </div>
+    <ul>
+      <li>render()</li>
+      <li>Template Configuration</li>
+      <li>Template Directory Setup</li>
+    </ul>
+
+    <div class="class-item" id="class-container-16">
+      <input type="checkbox" id="class-16" class="class-checkbox">
+      <label for="class-16" class="class-title">Class 16: Request &amp; Response Cycle</label>
+    </div>
+    <ul>
+      <li>Browser Request Flow</li>
+      <li>URL → View → Template → Response</li>
+    </ul>
+
+    <div class="class-item" id="class-container-17">
+      <input type="checkbox" id="class-17" class="class-checkbox">
+      <label for="class-17" class="class-title">Class 17: Project Organization Best Practices</label>
+    </div>
+    <ul>
+      <li>Folder Structure</li>
+      <li>Separation of Concerns</li>
+      <li>Reusable Project Architecture</li>
+    </ul>
+
+    <hr>
+
+    <!-- Module 03 -->
+    <div class="module-title">Module 03: Django Templates (Classes 18-29)</div>
+
+    <div class="class-item" id="class-container-18">
+      <input type="checkbox" id="class-18" class="class-checkbox">
+      <label for="class-18" class="class-title">Class 18: Template Language Basics</label>
+    </div>
+    <ul>
+      <li>Variables</li>
+      <li>Context Data</li>
+    </ul>
+
+    <div class="class-item" id="class-container-19">
+      <input type="checkbox" id="class-19" class="class-checkbox">
+      <label for="class-19" class="class-title">Class 19: Template Tags</label>
+    </div>
+    <ul>
+      <li>if</li>
+      <li>for</li>
+      <li>comment</li>
+    </ul>
+
+    <div class="class-item" id="class-container-20">
+      <input type="checkbox" id="class-20" class="class-checkbox">
+      <label for="class-20" class="class-title">Class 20: Template Filters</label>
+    </div>
+    <ul>
+      <li>upper</li>
+      <li>lower</li>
+      <li>length</li>
+      <li>default</li>
+    </ul>
+
+    <div class="class-item" id="class-container-21">
+      <input type="checkbox" id="class-21" class="class-checkbox">
+      <label for="class-21" class="class-title">Class 21: Static Files Configuration</label>
+    </div>
+    <ul>
+      <li>CSS</li>
+      <li>JavaScript</li>
+      <li>Images</li>
+      <li>STATIC_URL</li>
+    </ul>
+
+    <div class="class-item" id="class-container-22">
+      <input type="checkbox" id="class-22" class="class-checkbox">
+      <label for="class-22" class="class-title">Class 22: Template Inheritance</label>
+    </div>
+    <ul>
+      <li>base.html</li>
+      <li>block</li>
+      <li>extends</li>
+    </ul>
+
+    <div class="class-item" id="class-container-23">
+      <input type="checkbox" id="class-23" class="class-checkbox">
+      <label for="class-23" class="class-title">Class 23: Template Includes</label>
+    </div>
+    <ul>
+      <li>include</li>
+      <li>Partial Templates</li>
+    </ul>
+
+    <div class="class-item" id="class-container-24">
+      <input type="checkbox" id="class-24" class="class-checkbox">
+      <label for="class-24" class="class-title">Class 24: URL Template Tags</label>
+    </div>
+    <ul>
+      <li>url tag</li>
+      <li>Dynamic Links</li>
+    </ul>
+
+    <div class="class-item" id="class-container-25">
+      <input type="checkbox" id="class-25" class="class-checkbox">
+      <label for="class-25" class="class-title">Class 25: Navigation System</label>
+    </div>
+    <ul>
+      <li>Navbar</li>
+      <li>Active Menu</li>
+    </ul>
+
+    <div class="class-item" id="class-container-26">
+      <input type="checkbox" id="class-26" class="class-checkbox">
+      <label for="class-26" class="class-title">Class 26: Working with Forms</label>
+    </div>
+    <ul>
+      <li>HTML Forms</li>
+      <li>GET Method</li>
+      <li>POST Method</li>
+    </ul>
+
+    <div class="class-item" id="class-container-27">
+      <input type="checkbox" id="class-27" class="class-checkbox">
+      <label for="class-27" class="class-title">Class 27: Template Best Practices</label>
+    </div>
+    <ul>
+      <li>Reusable Components</li>
+      <li>Clean Structure</li>
+      <li>Folder Organization</li>
+    </ul>
+
+    <div class="class-item" id="class-container-28">
+      <input type="checkbox" id="class-28" class="class-checkbox">
+      <label for="class-28" class="class-title">Class 28: Multi-Page Website Layout</label>
+    </div>
+    <ul>
+      <li>Home Page</li>
+      <li>About Page</li>
+      <li>Contact Page</li>
+    </ul>
+
+    <div class="class-item" id="class-container-29">
+      <input type="checkbox" id="class-29" class="class-checkbox">
+      <label for="class-29" class="class-title">Class 29: Mini Project</label>
+    </div>
+    <ul>
+      <li>Corporate Website UI Development</li>
+    </ul>
+
+    <hr>
+
+    <!-- Module 04 -->
+    <div class="module-title">Module 04: Models &amp; Database (Classes 30-37)</div>
+
+    <div class="class-item" id="class-container-30">
+      <input type="checkbox" id="class-30" class="class-checkbox">
+      <label for="class-30" class="class-title">Class 30: Introduction to Models</label>
+    </div>
+    <ul>
+      <li>Creating Models</li>
+      <li>Model Fields</li>
+      <li>Model Meta Class</li>
+      <li>str() Method</li>
+    </ul>
+
+    <div class="class-item" id="class-container-31">
+      <input type="checkbox" id="class-31" class="class-checkbox">
+      <label for="class-31" class="class-title">Class 31: Custom User Model</label>
+    </div>
+    <ul>
+      <li>Why Custom User Model?</li>
+      <li>Extending AbstractUser</li>
+      <li>Creating User Model</li>
+      <li>AUTH_USER_MODEL</li>
+      <li>Migration Process</li>
+    </ul>
+
+    <div class="class-item" id="class-container-32">
+      <input type="checkbox" id="class-32" class="class-checkbox">
+      <label for="class-32" class="class-title">Class 32: Database Migrations</label>
+    </div>
+    <ul>
+      <li>makemigrations</li>
+      <li>migrate</li>
+      <li>Understanding Migration Files</li>
+    </ul>
+
+    <div class="class-item" id="class-container-33">
+      <input type="checkbox" id="class-33" class="class-checkbox">
+      <label for="class-33" class="class-title">Class 33: Django Admin Panel</label>
+    </div>
+    <ul>
+      <li>Register Models</li>
+      <li>Register Custom User Model</li>
+      <li>Admin Customization</li>
+    </ul>
+
+    <div class="class-item" id="class-container-34">
+      <input type="checkbox" id="class-34" class="class-checkbox">
+      <label for="class-34" class="class-title">Class 34: QuerySets Basics</label>
+    </div>
+    <ul>
+      <li>all()</li>
+      <li>filter()</li>
+      <li>exclude()</li>
+      <li>get()</li>
+      <li>first()</li>
+    </ul>
+
+    <div class="class-item" id="class-container-35">
+      <input type="checkbox" id="class-35" class="class-checkbox">
+      <label for="class-35" class="class-title">Class 35: CRUD Operations</label>
+    </div>
+    <ul>
+      <li>Create</li>
+      <li>Read</li>
+      <li>Update</li>
+      <li>Delete</li>
+    </ul>
+
+    <div class="class-item" id="class-container-36">
+      <input type="checkbox" id="class-36" class="class-checkbox">
+      <label for="class-36" class="class-title">Class 36: Passing Database Data to Templates</label>
+    </div>
+    <ul>
+      <li>Context Data</li>
+      <li>Dynamic Content</li>
+    </ul>
+
+    <div class="class-item" id="class-container-37">
+      <input type="checkbox" id="class-37" class="class-checkbox">
+      <label for="class-37" class="class-title">Class 37: Dynamic Content Rendering</label>
+    </div>
+    <ul>
+      <li>Template + Database Integration</li>
+      <li>Listing Pages</li>
+      <li>Detail Pages</li>
+    </ul>
+
+    <hr>
+
+    <!-- Module 05 -->
+    <div class="module-title">Module 05: Blog Project Development (Classes 38-46)</div>
+
+    <div class="class-title" style="margin-bottom: 10px;">Project: Dynamic Blog Website</div>
+
+    <div class="class-item" id="class-container-38">
+      <input type="checkbox" id="class-38" class="class-checkbox">
+      <label for="class-38" class="class-title">Class 38: Project Planning &amp; Setup</label>
+    </div>
+    <ul>
+      <li>Project Requirements</li>
+      <li>Folder Structure</li>
+      <li>Application Planning</li>
+    </ul>
+
+    <div class="class-item" id="class-container-39">
+      <input type="checkbox" id="class-39" class="class-checkbox">
+      <label for="class-39" class="class-title">Class 39: Base Template Architecture</label>
+    </div>
+    <ul>
+      <li>Master Layout</li>
+      <li>Template Organization</li>
+    </ul>
+
+    <div class="class-item" id="class-container-40">
+      <input type="checkbox" id="class-40" class="class-checkbox">
+      <label for="class-40" class="class-title">Class 40: Header, Footer &amp; Navbar Components</label>
+    </div>
+    <ul>
+      <li>Reusable Components</li>
+      <li>Template Includes</li>
+    </ul>
+
+    <div class="class-item" id="class-container-41">
+      <input type="checkbox" id="class-41" class="class-checkbox">
+      <label for="class-41" class="class-title">Class 41: Blog Model Design</label>
+    </div>
+    <ul>
+      <li>Blog Model</li>
+      <li>Category Model</li>
+      <li>Slug Field</li>
+    </ul>
+
+    <div class="class-item" id="class-container-42">
+      <input type="checkbox" id="class-42" class="class-checkbox">
+      <label for="class-42" class="class-title">Class 42: Blog List Page</label>
+    </div>
+    <ul>
+      <li>Dynamic Post Listing</li>
+      <li>QuerySet Rendering</li>
+    </ul>
+
+    <div class="class-item" id="class-container-43">
+      <input type="checkbox" id="class-43" class="class-checkbox">
+      <label for="class-43" class="class-title">Class 43: Blog Details Page</label>
+    </div>
+    <ul>
+      <li>Slug-Based Routing</li>
+      <li>Dynamic Detail View</li>
+    </ul>
+
+    <div class="class-item" id="class-container-44">
+      <input type="checkbox" id="class-44" class="class-checkbox">
+      <label for="class-44" class="class-title">Class 44: Category &amp; Filtering System</label>
+    </div>
+    <ul>
+      <li>Category Pages</li>
+      <li>Post Filtering</li>
+    </ul>
+
+    <div class="class-item" id="class-container-45">
+      <input type="checkbox" id="class-45" class="class-checkbox">
+      <label for="class-45" class="class-title">Class 45: Search Functionality</label>
+    </div>
+    <ul>
+      <li>Search Form</li>
+      <li>Search Query</li>
+      <li>Search Results</li>
+    </ul>
+
+    <div class="class-item" id="class-container-46">
+      <input type="checkbox" id="class-46" class="class-checkbox">
+      <label for="class-46" class="class-title">Class 46: Final Project Review &amp; Deployment Basics</label>
+    </div>
+    <ul>
+      <li>DEBUG=False</li>
+      <li>ALLOWED_HOSTS</li>
+      <li>Static Files Collection</li>
+      <li>Basic Deployment Concepts</li>
+    </ul>
+
+    <hr>
+
+    <!-- Final Project Features -->
+    <div class="features-section-title">Final Project Features</div>
+
+    <div class="features-subtitle">Frontend Features</div>
+    <ul>
+      <li>Home Page</li>
+      <li>About Page</li>
+      <li>Contact Page</li>
+      <li>Blog Listing Page</li>
+      <li>Blog Details Page</li>
+      <li>Category Pages</li>
+      <li>Search System</li>
+    </ul>
+
+    <div class="features-subtitle">Backend Features</div>
+    <ul>
+      <li>Custom User Model</li>
+      <li>Django Admin Panel</li>
+      <li>Blog Management System</li>
+      <li>Category Management</li>
+      <li>Dynamic Content Rendering</li>
+    </ul>
+
+    <div class="features-subtitle">Development Features</div>
+    <ul>
+      <li>Template Inheritance</li>
+      <li>Reusable Components</li>
+      <li>Static Assets Management</li>
+      <li>Professional Folder Structure</li>
+    </ul>
+
+    <hr>
+
+    <!-- Learning Outcomes -->
+    <div class="outcomes-title">Learning Outcomes</div>
+    <div class="outcomes-desc">After completing all 46 classes, students will be able to:</div>
+    <ul>
+      <li>Build Django projects from scratch</li>
+      <li>Configure and use Virtual Environments</li>
+      <li>Create reusable template architectures</li>
+      <li>Work with Django Models and Databases</li>
+      <li>Implement Custom User Models</li>
+      <li>Perform CRUD Operations</li>
+      <li>Build dynamic template-driven websites</li>
+      <li>Develop a complete Blog Management System</li>
+      <li>Manage data through Django Admin</li>
+      <li>Implement Search and Category Filtering</li>
+      <li>Follow professional Django project structure and best practices</li>
+      <li>Prepare Django projects for deployment</li>
+    </ul>
+
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const storageKey = 'django_course_checklist';
+
+      // Load saved state
+      let savedState = {};
+      try {
+        const stored = localStorage.getItem(storageKey);
+        if (stored) {
+          savedState = JSON.parse(stored);
+        }
+      } catch (e) {
+        console.error('Error reading checklist from localStorage:', e);
+      }
+
+      // Initialize checkbox states
+      const checkboxes = document.querySelectorAll('.class-checkbox');
+      checkboxes.forEach(checkbox => {
+        const id = checkbox.id;
+        const container = document.getElementById(`class-container-${id.split('-')[1]}`);
+
+        if (savedState[id]) {
+          checkbox.checked = true;
+          if (container) container.classList.add('completed');
+        }
+
+        // Add event listener to save state on change
+        checkbox.addEventListener('change', () => {
+          if (checkbox.checked) {
+            savedState[id] = true;
+            if (container) container.classList.add('completed');
+          } else {
+            delete savedState[id];
+            if (container) container.classList.remove('completed');
+          }
+          try {
+            localStorage.setItem(storageKey, JSON.stringify(savedState));
+          } catch (e) {
+            console.error('Error saving checklist to localStorage:', e);
+          }
+        });
+      });
+    });
+  </script>
+</body>
+
+</html>
