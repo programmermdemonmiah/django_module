@@ -26,7 +26,20 @@ SECRET_KEY = 'django-insecure-)y)nmn71#n8@wecfz0dpo$j+@x4agg7ok%gfw$%wniimps^k#-
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
+
+CORS_ORIGIN_ALLOW_ALL = True
+
+CORS_ALLOW_ALL_ORIGINS = True
+CORS_ALLOW_CREDENTIALS = True
+CORS_ALLOWED_ORIGINS = [
+    "https://django-class-module.onrender.com",
+]
+
+
+CSRF_TRUSTED_ORIGINS = [
+    "https://django-class-module.onrender.com"
+]
 
 
 # Application definition
